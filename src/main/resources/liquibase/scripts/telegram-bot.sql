@@ -100,7 +100,11 @@ VALUES ('1', '\shelters\shelter-map-1.jpg', 280887, '1'),
 -- changeset irina:3
 
 insert into adopter
-values (1, 123, 'ваш username без @ - например anyaLala', 'name', 'address', 25, '1234', null);
+values (1, 123,
+
+        'ВПИСЫВАТЬ СЮДА ваш username без @ - например: anyaLala',
+
+        'name', 'address', 25, '1234', null);
 
 insert into animal
 values (1, 'Тузик', 'коричневый', 'собака дворняга', 2, '-', '-', 1, 2, 1),
