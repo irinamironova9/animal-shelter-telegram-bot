@@ -17,7 +17,7 @@ public class Adopter {
     private String username;
     private String name;
     private String address;
-    private int age;
+    private Integer age;
     private String telephoneNumber;
 
     @OneToMany(mappedBy = "adopter", fetch = FetchType.LAZY)

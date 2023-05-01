@@ -2,7 +2,6 @@ package com.example.animalsheltertelegrambot.service;
 
 import com.example.animalsheltertelegrambot.models.Shelter;
 import com.example.animalsheltertelegrambot.repositories.AnimalRepository;
-import com.example.animalsheltertelegrambot.repositories.InfoMessageRepository;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.model.request.InlineKeyboardMarkup;
 import com.pengrad.telegrambot.request.AnswerCallbackQuery;
@@ -25,13 +24,10 @@ public class MessageSender {
     private static final Logger logger = LoggerFactory.getLogger(MessageSender.class);
 
     private final AnimalRepository animalRepository;
-    private final InfoMessageRepository messageRepository;
     private static TelegramBot telegramBot;
 
-    public MessageSender(AnimalRepository animalRepository,
-                         InfoMessageRepository messageRepository) {
+    public MessageSender(AnimalRepository animalRepository) {
         this.animalRepository = animalRepository;
-        this.messageRepository = messageRepository;
     }
 
     public static void setTelegramBot(TelegramBot telegramBot) {
